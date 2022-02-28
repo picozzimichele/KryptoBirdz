@@ -1,3 +1,5 @@
+//Ignore the error below
+// eslint-disable-next-line no-undef
 const Migrations = artifacts.require("Migrations");
 
 module.exports = function (deployer) {
