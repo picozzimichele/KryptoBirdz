@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Web3 from "web3";
 import detectEthereumProvider from "@metamask/detect-provider";
 import KryptoBird from "../abis/KryptoBird.json";
+import "./App.css"
 
 class App extends Component {
   async componentDidMount() {
@@ -93,7 +94,12 @@ class App extends Component {
 
         {/* Display NFTs */}
         {this.state.kryptoBirdz.map((NFT, index) => {
-          return(<p key={index}>{NFT}</p>)
+          return(
+            <div key={index}>
+              <p >{NFT}</p>
+              <img className="image" style={{height: 200, width: 150}} src={NFT}/>
+            </div>
+            )
         })}
       </div>
     )
