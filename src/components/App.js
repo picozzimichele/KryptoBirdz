@@ -86,7 +86,7 @@ class App extends Component {
         }}>
             <input 
               type="text" 
-              placeholder='Add file Location' 
+              placeholder='Add file url' 
               ref={(input) => this.kryptoBird = input}
             />
             <input type='submit' value="MINT"/>
@@ -96,7 +96,6 @@ class App extends Component {
         {this.state.kryptoBirdz.map((NFT, index) => {
           return(
             <div key={index}>
-              <p >{NFT}</p>
               <img className="image" style={{height: 200, width: 150}} src={NFT}/>
             </div>
             )
